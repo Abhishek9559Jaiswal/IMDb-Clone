@@ -7,7 +7,7 @@ const movieContainer = document.getElementById('movie-container');
 
 // Load Movies from OMDb api
 async function loadMovies(searchItem) {
-    const apiURL = `https://www.omdbapi.com/?s=${searchItem}&page=1&apikey=5d916c6a`;
+    const apiURL = `https://www.omdbapi.com/?s=${searchItem}&page=1&apikey=2513ead6`;
     const responses = await fetch(`${apiURL}`);
     const data = await responses.json();
    
@@ -81,10 +81,10 @@ function loadMoviesDetail() {
         
         movie.addEventListener('click', async () =>{
             searchBox.value = "";
-            // const res = await fetch(`https://www.omdbapi.com/?s=${movie.dataset.id}&page=1&apikey=5d916c6a`);
+            // const res = await fetch(`https://www.omdbapi.com/?s=${movie.dataset.id}&page=1&apikey=2513ead6`);
             // const movieDetail = await res.json();
 
-            const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=5d916c6a`);
+            const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=2513ead6`);
             const movieDetails = await result.json();
 
             console.log(movieDetails);
